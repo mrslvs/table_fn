@@ -59,38 +59,35 @@ document.querySelector(".backdrop").addEventListener("calculate", (e) => {
         cell.style.padding = "5px";
         cell.style.border = "1px solid black";
       }
-
-      //   const cell = row.insertCell();
-      //   res = r * c;
-      //   cell.innerText = `${res}`;
-
-      //   if (c == 0 && r == 0) {
-      //     const cel = row.insertCell();
-      //     cel.innerText = " ";
-      //   // cell style
-      //   cel.style.padding = "5px";
-      //   cel.style.border = "1px solid black";
-      //   } else if (c == 0 && r != 0) {
-      //     const cel = row.insertCell();
-      //     cel.innerText = `Y=${r}`;
-      //     // cell style
-      //     cel.style.padding = "5px";
-      //     cel.style.border = "1px solid black";
-      //   } else if (r == 0 && c != 0) {
-      //     const cel = row.insertCell();
-      //     cel.innerText = `X=${r}`;
-      //     // cell style
-      //     cel.style.padding = "5px";
-      //     cel.style.border = "1px solid black";
-      //   } else {
-      //     const cel = row.insertCell();
-      //     var res = r * c;
-      //     cel.innerText = `${res}`;
-      //     // cell style
-      //     cel.style.padding = "5px";
-      //     cel.style.border = "1px solid black";
-      //   }
     }
   }
   document.querySelector(".table-wrapper").appendChild(table);
+});
+
+var inputX = document.getElementById("x-value");
+inputX.addEventListener("blur", function () {
+  if (inputX.value < 1 || inputX.value > 9) {
+    alert(
+      "Invalid input! You are not allowed to continue unless the input is valid."
+    );
+    calculateButton.style.display = "none";
+    return false;
+  } else {
+    calculateButton.style.display = "inline-block";
+    return true;
+  }
+});
+
+var inputY = document.getElementById("y-value");
+inputY.addEventListener("blur", function () {
+  if (inputY.value < 1 || inputY.value > 9) {
+    alert(
+      "Invalid input! You are not allowed to continue unless the input is valid."
+    );
+    calculateButton.style.display = "none";
+    return false;
+  } else {
+    calculateButton.style.display = "inline-block";
+    return true;
+  }
 });

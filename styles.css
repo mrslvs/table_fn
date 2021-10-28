@@ -53,3 +53,17 @@ label {
   margin: 20px;
   border-radius: 3%;
 }
+
+#alert-x {
+  display: none;
+  color: red;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#alert-y {
+  display: none;
+  color: red;
+  font-size: 0.9em;
+  font-weight: bold;
+}
