@@ -2,9 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Assignment 4</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <form action="">
+        <div>
+          <label for="x-value">How many X:</label>
+          <input type="number" id="x-value" min="1" max="9" />
+        </div>
+        <div>
+          <label for="y-value">How many Y:</label>
+          <input type="number" id="y-value" min="1" max="9" />
+          <br />
+          <button type="button" id="calculate">Calculate</button>
+        </div>
+      </form>
+    </div>
+    <div class="backdrop">
+      <div class="modal">
+        <h3>Function X*Y</h3>
+        <div class="table-wrapper"></div>
+        <button type="button" id="close-modal">Close</button>
+      </div>
+    </div>
+    <footer>
+      <script src="./main.js"></script>
+    </footer>
+  </body>
 </html>
