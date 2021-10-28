@@ -74,7 +74,7 @@ inputX.addEventListener("blur", function () {
     (inputX.value < 1 || inputX.value > 9) &&
     (inputY.value < 1 || inputY.value > 9)
   ) {
-    alert("Invalid input for X!");
+    alert("Invalid input for X&Y!");
     calculateButton.disabled = true;
     return false;
   } else if (
@@ -82,6 +82,7 @@ inputX.addEventListener("blur", function () {
     (inputX.value > 0 || inputX.value < 10) &&
     (inputY.value < 1 || inputY.value > 9)
   ) {
+    alert("Invalid input for Y!");
     calculateButton.disabled = true;
     return false;
   } else if (
@@ -89,6 +90,7 @@ inputX.addEventListener("blur", function () {
     (inputX.value < 1 || inputX.value > 9) &&
     (inputY.value > 0 || inputY.value < 10)
   ) {
+    alert("Invalid input for X!");
     calculateButton.disabled = true;
     return false;
   } else {
@@ -104,7 +106,7 @@ inputY.addEventListener("blur", function () {
     (inputX.value < 1 || inputX.value > 9) &&
     (inputY.value < 1 || inputY.value > 9)
   ) {
-    alert("Invalid input for X!");
+    alert("Invalid input for X&Y!");
     calculateButton.disabled = true;
     return false;
   } else if (
@@ -112,6 +114,7 @@ inputY.addEventListener("blur", function () {
     (inputX.value > 0 || inputX.value < 10) &&
     (inputY.value < 1 || inputY.value > 9)
   ) {
+    alert("Invalid input for Y!");
     calculateButton.disabled = true;
     return false;
   } else if (
@@ -119,6 +122,7 @@ inputY.addEventListener("blur", function () {
     (inputX.value < 1 || inputX.value > 9) &&
     (inputY.value > 0 || inputY.value < 10)
   ) {
+    alert("Invalid input for X!");
     calculateButton.disabled = true;
     return false;
   } else {
