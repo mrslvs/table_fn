@@ -70,36 +70,60 @@ var inputY = document.getElementById("y-value");
 
 inputX.addEventListener("blur", function () {
   if (
-    inputX.value < 1 ||
-    inputX.value > 9 ||
-    inputY.value < 1 ||
-    inputY.value > 9
+    //   both invalid
+    (inputX.value < 1 || inputX.value > 9) &&
+    (inputY.value < 1 || inputY.value > 9)
   ) {
-    alert(
-      "Invalid input! You are not allowed to continue unless the input is valid."
-    );
-    calculateButton.style.display = "none";
+    alert("Invalid input for X!");
+    calculateButton.disabled = true;
+    return false;
+  } else if (
+    // X valid, Y invalid
+    (inputX.value > 0 || inputX.value < 10) &&
+    (inputY.value < 1 || inputY.value > 9)
+  ) {
+    calculateButton.disabled = true;
+    return false;
+  } else if (
+    // X invalid, Y valid
+    (inputX.value < 1 || inputX.value > 9) &&
+    (inputY.value > 0 || inputY.value < 10)
+  ) {
+    calculateButton.disabled = true;
     return false;
   } else {
-    calculateButton.style.display = "inline-block";
+    //   both valid
+    calculateButton.disabled = false;
     return true;
   }
 });
 
 inputY.addEventListener("blur", function () {
   if (
-    inputY.value < 1 ||
-    inputY.value > 9 ||
-    inputX.value < 1 ||
-    inputX.value > 9
+    //   both invalid
+    (inputX.value < 1 || inputX.value > 9) &&
+    (inputY.value < 1 || inputY.value > 9)
   ) {
-    alert(
-      "Invalid input! You are not allowed to continue unless the input is valid."
-    );
-    calculateButton.style.display = "none";
+    alert("Invalid input for X!");
+    calculateButton.disabled = true;
+    return false;
+  } else if (
+    // X valid, Y invalid
+    (inputX.value > 0 || inputX.value < 10) &&
+    (inputY.value < 1 || inputY.value > 9)
+  ) {
+    calculateButton.disabled = true;
+    return false;
+  } else if (
+    // X invalid, Y valid
+    (inputX.value < 1 || inputX.value > 9) &&
+    (inputY.value > 0 || inputY.value < 10)
+  ) {
+    calculateButton.disabled = true;
     return false;
   } else {
-    calculateButton.style.display = "inline-block";
+    //   both valid
+    calculateButton.disabled = false;
     return true;
   }
 });
