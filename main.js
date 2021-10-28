@@ -64,9 +64,17 @@ document.querySelector(".backdrop").addEventListener("calculate", (e) => {
   document.querySelector(".table-wrapper").appendChild(table);
 });
 
+// validate inputs
 var inputX = document.getElementById("x-value");
+var inputY = document.getElementById("y-value");
+
 inputX.addEventListener("blur", function () {
-  if (inputX.value < 1 || inputX.value > 9) {
+  if (
+    inputX.value < 1 ||
+    inputX.value > 9 ||
+    inputY.value < 1 ||
+    inputY.value > 9
+  ) {
     alert(
       "Invalid input! You are not allowed to continue unless the input is valid."
     );
@@ -78,9 +86,13 @@ inputX.addEventListener("blur", function () {
   }
 });
 
-var inputY = document.getElementById("y-value");
 inputY.addEventListener("blur", function () {
-  if (inputY.value < 1 || inputY.value > 9) {
+  if (
+    inputY.value < 1 ||
+    inputY.value > 9 ||
+    inputX.value < 1 ||
+    inputX.value > 9
+  ) {
     alert(
       "Invalid input! You are not allowed to continue unless the input is valid."
     );
