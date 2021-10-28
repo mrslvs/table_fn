@@ -4,8 +4,8 @@ calculateButton.addEventListener("click", () => {
   document.querySelector(".backdrop").dispatchEvent(
     new CustomEvent("calculate", {
       detail: {
-        x: document.querySelector("#x-value").value,
-        y: document.querySelector("#y-value").value,
+        x: document.querySelector("#y-value").value,
+        y: document.querySelector("#x-value").value,
       },
     })
   );
@@ -14,11 +14,14 @@ calculateButton.addEventListener("click", () => {
 var closeModal = document.querySelector("#close-modal");
 closeModal.addEventListener("click", () => {
   document.querySelector(".backdrop").style.display = "none";
+  parent = document.querySelector(".table-wrapper");
+  remChild = document.querySelector("table");
+  parent.removeChild(remChild);
 });
 
 document.querySelector(".backdrop").addEventListener("calculate", (e) => {
   // show modal
-  document.querySelector(".backdrop").style.display = "flex";
+  document.querySelector(".backdrop").style.display = "grid";
   //   create table
   const table = document.createElement("table");
   table.style.border = "1px solid black";
